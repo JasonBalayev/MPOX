@@ -1,12 +1,13 @@
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
+from flask_cors import CORS  # Import CORS to handle cross-origin requests
 from datetime import date
 
 # Initialize the Flask application
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
 # Configure the SQLAlchemy part of the app instance
-# "Robloxjay1 is the password to PostgreSQL"
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Robloxjay1@localhost/monkeypox_db?sslmode=disable'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
