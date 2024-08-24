@@ -1,1 +1,1 @@
-Working a way to track the newest spread of Monkey Pox
+Working on a way to track the newest spread of Monkey Pox
