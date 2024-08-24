@@ -8,7 +8,8 @@ app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
 # Configure the SQLAlchemy part of the app instance
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Robloxjay1@localhost/monkeypox_db?sslmode=disable'
+# REPLACE PW WITH YOUR ACTUAL PW
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:FakePassword@localhost/monkeypox_db?sslmode=disable'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Create the SQLAlchemy db instance
