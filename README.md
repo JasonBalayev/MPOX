@@ -14,7 +14,7 @@ This project aims to create a tool to track the spread of Monkey Pox. The goal i
 
 The project utilizes the following technologies:
 
-- **Backend**: Flask (Python)
+- **Backend**: Django (Python)
 - **Frontend**: React (JavaScript)
 - **Database**: Docker
 - **APIS**: Postman, OpenAI
