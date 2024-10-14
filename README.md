@@ -16,7 +16,8 @@ The project utilizes the following technologies:
 
 - **Backend**: Flask (Python)
 - **Frontend**: React (JavaScript)
-- **Database**: MongoDB (or similar, if applicable)
+- **Database**: Docker
+- **APIS**: Postman, OpenAI
 - **Environment**: Virtualenv for Python dependencies
 - **Version Control**: Git
 
