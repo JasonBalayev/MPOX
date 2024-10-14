@@ -16,7 +16,7 @@ The project utilizes the following technologies:
 
 - **Backend**: Django (Python)
 - **Frontend**: React (JavaScript)
-- **Database**: Docker
+- **Database**: Postgres
 - **APIS**: Postman, OpenAI
 - **Environment**: Virtualenv for Python dependencies
 - **Version Control**: Git
