@@ -1,32 +1,58 @@
-import React, { useEffect, useState } from 'react';
-import { getCases } from '../api';
+import React, { useState } from 'react';
+import './CaseList.css';
 
-const CaseList = () => {
-    const [cases, setCases] = useState([]);
+const CaseList = ({ cases }) => {
+    const [searchTerm, setSearchTerm] = useState('');
+    const [sortBy, setSortBy] = useState('cases');
 
-    useEffect(() => {
-        const fetchCases = async () => {
-            try {
-                const data = await getCases();
-                setCases(data);
-            } catch (error) {
-                console.error('Error fetching cases:', error);
-            }
-        };
-
-        fetchCases();
-    }, []);
+    const sortedCases = Object.entries(cases)
+        .filter(([country]) => 
+            country.toLowerCase().includes(searchTerm.toLowerCase())
+        )
+        .sort((a, b) => b[1][sortBy] - a[1][sortBy]);
 
     return (
-        <div>
-            <h2>Monkeypox Cases</h2>
-            <ul>
-                {cases.map((caseItem) => (
-                    <li key={caseItem.id}>
-                        {caseItem.country} - {caseItem.state}: {caseItem.cases} cases on {caseItem.date_reported}
-                    </li>
+        <div className="case-list">
+            <div className="list-header">
+                <h2>Global Cases</h2>
+                <input
+                    type="text"
+                    placeholder="Search countries..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="search-input"
+                />
+                <select 
+                    value={sortBy} 
+                    onChange={(e) => setSortBy(e.target.value)}
+                    className="sort-select"
+                >
+                    <option value="cases">Total Cases</option>
+                    <option value="active">Active Cases</option>
+                    <option value="recovered">Recovered</option>
+                </select>
+            </div>
+            <div className="cases-grid">
+                {sortedCases.map(([country, data]) => (
+                    <div key={country} className="case-card">
+                        <h3>{country}</h3>
+                        <div className="case-stats">
+                            <div className="stat">
+                                <span>Total</span>
+                                <span>{data.cases}</span>
+                            </div>
+                            <div className="stat">
+                                <span>Active</span>
+                                <span>{data.active}</span>
+                            </div>
+                            <div className="stat">
+                                <span>Recovered</span>
+                                <span>{data.recovered}</span>
+                            </div>
+                        </div>
+                    </div>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 };

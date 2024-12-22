@@ -1,0 +1,53 @@
+.info-panel {
+    padding: 1.5rem;
+}
+
+.info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.stat-box {
+    background-color: #3a3a3a;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.stat-box h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.stat-number {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.regions-list {
+    margin-top: 2rem;
+}
+
+.regions-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.regions-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #3a3a3a;
+} 

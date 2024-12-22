@@ -36,3 +36,47 @@
     transform: rotate(360deg);
   }
 }
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.globe-container {
+    flex: 1;
+    position: relative;
+}
+
+.side-panel {
+    width: 400px;
+    background-color: #2a2a2a;
+    border-left: 1px solid #3a3a3a;
+    overflow-y: auto;
+}
+
+.country-label {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    padding: 12px;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.country-label h3 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+}
+
+.country-label p {
+    margin: 0;
+    font-size: 14px;
+}
