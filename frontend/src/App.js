@@ -9,7 +9,7 @@ function App() {
     
     useEffect(() => {
         // Fetch globe data (geojson) and case data
-        fetch('/path-to-geojson-file') // Replace with the path to your geojson file
+        fetch('/GeoJSON/countries.geojson') // Replace with the path to your geojson file
             .then(res => res.json())
             .then(setCountries);
         
